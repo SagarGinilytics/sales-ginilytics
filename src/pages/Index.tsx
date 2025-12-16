@@ -41,7 +41,19 @@ export default function Index() {
         throw new Error(`Request failed with status ${response.status}`);
       }
 
-      const result: ApiResponse = await response.json();
+      const rawText = await response.text();
+
+      if (!rawText) {
+        throw new Error("Server returned an empty response");
+      }
+
+      let result: ApiResponse;
+      try {
+        result = JSON.parse(rawText);
+      } catch {
+        console.error("Raw server response:", rawText);
+        throw new Error("Server returned invalid JSON");
+      }
 
       if (!result.previewHtml || !result.downloadUrl) {
         throw new Error("Invalid response format from server");
