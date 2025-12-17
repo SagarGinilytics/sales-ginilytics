@@ -5,7 +5,7 @@ import { toast } from "@/hooks/use-toast";
 import { FileText, Sparkles } from "lucide-react";
 
 // Webhook URL - Change this to your n8n webhook URL
-const WEBHOOK_URL = "https://phil-pirates-toe-ocean.trycloudflare.com/webhook/coverLetter-sagar-kamboj";
+const WEBHOOK_URL = "https://pressure-mysql-investing-ipod.trycloudflare.com/webhook-test/coverLetter-sagar-kamboj";
 
 interface ApiResponse {
   previewHtml: string;
