@@ -59,15 +59,17 @@ export function AppSidebar() {
         {/* Logo Section */}
         <div className="p-6 border-b border-sidebar-border">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-glow">
-              <FileText className="h-5 w-5 text-primary-foreground" />
-            </div>
+            <img 
+              src="https://storage.googleapis.com/gpt-engineer-file-uploads/yAAKJhrcCROub1vhL5ukSocvL1H3/uploads/1765965008669-Letter-G.png" 
+              alt="CoverCraft Logo" 
+              className="w-10 h-10 rounded-xl object-contain"
+            />
             <div>
               <h1 className="font-heading text-lg font-semibold text-sidebar-foreground">
-                DocGen
+                CoverCraft
               </h1>
               <p className="text-xs text-muted-foreground">
-                AI-Powered Documents
+                Craft the perfect first impression
               </p>
             </div>
           </div>
