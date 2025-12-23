@@ -145,13 +145,6 @@ export default function ProposalGenerator() {
             </section>
           </div>
 
-          {/* Instructions */}
-          <footer className="mt-8 text-center text-sm text-muted-foreground">
-            <p>
-              To change the webhook URL, update the <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-xs">PROPOSAL_WEBHOOK_URL</code> constant in{" "}
-              <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-xs">src/pages/ProposalGenerator.tsx</code>
-            </p>
-          </footer>
         </main>
       </div>
     </MainLayout>

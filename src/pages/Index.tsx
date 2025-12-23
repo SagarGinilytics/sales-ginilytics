@@ -144,13 +144,6 @@ export default function Index() {
           </section>
         </div>
 
-        {/* Instructions */}
-        <footer className="mt-8 text-center text-sm text-muted-foreground">
-          <p>
-            To change the webhook URL, update the <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-xs">WEBHOOK_URL</code> constant in{" "}
-            <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-xs">src/pages/Index.tsx</code>
-          </p>
-          </footer>
         </main>
       </div>
     </MainLayout>
