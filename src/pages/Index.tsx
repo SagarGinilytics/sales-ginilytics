@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MainLayout } from "@/components/layout/MainLayout";
 import { CoverLetterForm } from "@/components/CoverLetterForm";
 import { CoverLetterPreview } from "@/components/CoverLetterPreview";
 import { toast } from "@/hooks/use-toast";
@@ -79,29 +80,30 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-              <FileText className="h-5 w-5 text-primary" />
-            </div>
-            <div>
-              <h1 className="font-heading text-xl font-semibold text-foreground">
-                Cover Letter Generator
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                AI-powered professional cover letters
-              </p>
+    <MainLayout>
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-10">
+          <div className="container max-w-6xl mx-auto px-4 sm:px-6 py-4">
+            <div className="flex items-center gap-3 lg:pl-0 pl-12">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <FileText className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h1 className="font-heading text-xl font-semibold text-foreground">
+                  Cover Letter Generator
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  AI-powered professional cover letters
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      {/* Main Content */}
-      <main className="container max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <div
+        {/* Main Content */}
+        <main className="container max-w-6xl mx-auto px-4 sm:px-6 py-8">
+          <div
           className="grid grid-cols-1 lg:grid-cols-2 gap-8"
           role="main"
           aria-label="Cover letter generator"
@@ -148,8 +150,9 @@ export default function Index() {
             To change the webhook URL, update the <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-xs">WEBHOOK_URL</code> constant in{" "}
             <code className="px-1.5 py-0.5 rounded bg-muted font-mono text-xs">src/pages/Index.tsx</code>
           </p>
-        </footer>
-      </main>
-    </div>
+          </footer>
+        </main>
+      </div>
+    </MainLayout>
   );
 }
